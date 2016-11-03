@@ -1,0 +1,366 @@
+/* VERHALEN OP OVERZICHTSPAGINA -  https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+
+
+/* ==================================
+        whole page in html
+=====================================*/
+
+html {
+    font-family: "trebuchet ms", sans-serif;
+}
+.index {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f3e5d8;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: .5em;
+    width: 100%;
+    margin-bottom: .5em;
+}
+
+/* ==================================
+=            Teksten                =
+=====================================*/
+
+h1 {
+    font-size: 1.7em;
+    color: #00d66c;
+    text-align: center;
+    margin-top: 1em;
+    margin-left: -1.2em;
+}
+h2 {
+    font-size: 1.5em;
+    border-radius: .5em;
+    color: #00d66c;
+    background-color: white;
+    text-align: center;
+    margin: .5em;
+}
+h3 {
+    color: #00d66c;
+    border-radius: .2em;
+    padding: .5em;
+}
+h4 {
+    display: none;
+}
+h5 {
+    font-size: .7em;
+    border-radius: .5em;
+    text-align: center;
+}
+h6 {
+    font-size: .7em;
+}
+section > p {
+    color: white;
+    background-color: #2802a0;
+    border-radius: .5em;
+    padding: .5em;
+    margin: .5em;
+}
+.noshow {
+    display: none;
+}
+p.deletefilter:hover {
+    color: white
+}
+
+/* ==================================
+=            Navigatie               =
+=====================================*/
+
+/* ==================================
+=            Eerte zicht            =
+=====================================*/
+.menu {
+    font-size: 1.2em;
+    margin-left:-4em;
+    margin-top: -.3em;
+
+}
+menu:hover {
+    color: #00d66c;
+}
+.menu > ul > li {
+    float: left;
+    position: relative;
+}
+.menu > ul > li > a {
+    padding: .3em 1.2em;;
+    color: black;
+}
+
+/*==================================
+            Dropdown 
+==================================*/
+
+a{
+    color: black;
+    cursor: auto;
+}
+
+ul {
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+    list-style: none;
+    
+}
+li {
+    padding-left: 1em;
+    padding-top: .1em;
+    padding-bottom: .2em;
+}
+.menu li:hover .sub-menu {
+    z-index: 1;
+    opacity: 1;
+}
+.sub-menu {
+    width: 190%;
+    padding: 5px 0px;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    z-index: -1;
+    opacity: 0;
+    background: white;
+    box-shadow:0px 4px 9px rgba(0,0,0,0.3);
+    margin-left: 2.3em;
+}
+.sub-menu li a:hover{
+    color:#00d66c;
+    
+}
+
+.sub-menu .current-item a {
+    background: white;
+    padding: .2em;
+    
+}
+
+/* ==================================
+=            Profiel               =
+=====================================*/
+
+.profile {
+    margin-top: 2em;
+}
+
+.span {
+    color: black;
+    font-size: 1.2em;
+    margin-right: .4em;
+}
+
+/* ==================================
+=            Linkjes               =
+=====================================*/
+
+a.deletefilter {
+    text-decoration: none;
+    color: white;
+}
+a.deletefilter:hover {
+    color: white;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: #00d66c;
+}
+
+
+/* ==================================
+=            Button                 =
+=====================================*/
+img{
+    border-radius: 50%;
+    width: 40%;
+    display: block;
+    margin: auto;
+    
+}
+/* ==================================
+=            Button                 =
+=====================================*/
+button {
+    height: 3em;
+    margin-bottom: .5em;
+    font-size: 1.25em;
+    background-color: #ff3264;
+    padding: .5em;
+    border-radius: .5em;
+    color: white;
+    border: none;
+    font-size:.9em;
+    width: 100%
+    
+}
+
+button:focus {
+    transform: scale(1.02, 1.02);
+}
+
+section{
+    margin-top:1em;
+}
+/* ==================================
+=            Searchbox              =
+=====================================*/
+
+input[type=search] {
+    margin-top:.4em;
+    width: 80%;
+    border: .1em solid #2802a0;
+    border-radius: .5em;
+    font-size: 1em;
+    background-color: white;
+    margin-bottom: .5em;
+}
+input {
+    background-color: #2802a0;
+    border-radius: .5em;
+    color: black;
+    padding: 1em;
+  
+}
+input.submit {
+    font-size: .9em;
+    width: 5em;
+    color: white;
+}
+
+/* ==================================
+=            Rating                 =
+=====================================*/
+
+.rating {
+    unicode-bidi: bidi-override;
+    text-align: center;
+    color: #ff3268;
+    direction: rtl;
+    margin-bottom: .9em;
+    margin-top: -.7em;
+}
+.rating > span {
+    display: inline-block;
+    position: relative;
+    width: 1.3em;
+}
+.rating > span:hover,
+.rating > span:hover ~ span {
+    color: transparent;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+    content: "\2605";
+    /* sterretje*/
+    position: absolute;
+    color: #ff3268;
+}
+
+/* ==================================
+=            Article               =
+=====================================*/
+
+section {
+    margin-top: .5em;
+}
+hr {
+    margin-bottom: -1em;
+    margin-top: -1em;
+}
+article {
+    background-color: white;
+    border-radius: .5em;
+    margin: .5em;
+    border: .1em solid;
+    border-color: #2802a0;
+}
+article p {
+    padding: 1em;
+    margin-top: 1em;
+}
+.button {
+    text-align: center;
+    height: 3em;
+    width: 49.5%;
+    color: white;
+    background-color: #ff3268;
+    font-size: .9em;
+    border-radius: .5em;
+    border: none;
+}
+
+.nulezen {
+    text-align: center;
+    height: 2em;
+    color: white;
+    width: 48.6%;
+    background-color: #ff3268;
+    font-size: .9em;
+    border-radius: 0em .5em .5em 0em;
+    border: none;
+    float: right;
+    margin-bottom: .2em;
+    margin-right: .2em;
+}
+.laterlezen {
+    text-align: center;
+    height: 2em;
+    color: white;
+    width: 48.6%;
+    background-color: #ff3268;
+    font-size: .9em;
+    border-radius: .5em .0em .0em .5em;
+    border: none;
+    float: left;
+    margin-bottom: 1em;
+    margin-left: .2em;
+}
+.article {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+span {
+    font-size: 1.2em;
+}
+/* ==================================
+=            Responsive             =
+=====================================*/
+
+@media(min-width: 40em) {
+/* ==================================
+=            Searchbox              =
+=====================================*/
+
+input[type=search] {
+    width: 87.5%;
+  }
+    
+@media(min-width: 65em) {
+/* ==================================
+=            Searchbox              =
+=====================================*/
+
+input[type=search] {
+    width: 92.4%;
+  }
+
+    
+    
+    /* ==================================
+=            Article               =
+=====================================*/
+
+}
+

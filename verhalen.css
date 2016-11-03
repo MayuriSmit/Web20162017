@@ -1,0 +1,347 @@
+/* VERHALEN OP OVERZICHTSPAGINA -  https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+
+
+/* ==================================
+        whole page in html
+=====================================*/
+
+html {
+    font-family: "trebuchet ms", sans-serif;
+}
+.index {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f3e5d8;
+    margin-left: 2em;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: .5em;
+    width: 86%;
+    margin-bottom: .5em;
+    position: fixed;
+}
+
+/* ==================================
+=            Teksten                =
+=====================================*/
+
+h1 {
+    font-size: 1.7em;
+    color: #00d66c;
+    text-align: center;
+    margin-top: 1em;
+    margin-left: -1.2em;
+}
+/* ==================================
+=            Afbeelding             =
+=====================================*/
+#mobiel{
+    margin-top: 9.5em;
+    border-radius: .5em;
+}
+.songMobile{
+        width: 21.5em;
+    }
+.zoonMobile{
+        width: 21.5em;
+    }
+.cockMobile{
+        width: 21.3em;
+    }
+#tablet{
+    display: none;
+}
+#desktop{
+    display:none;
+}
+/* ==================================
+=            Navigatie               =
+=====================================*/
+
+
+/* ==================================
+=            Eerte zicht            =
+=====================================*/
+
+.menu {
+    font-size: 1.2em;
+    margin-left: -4em;
+}
+menu:hover {
+    color: #00d66c;
+}
+.menu > ul > li {
+    float: left;
+    position: relative;
+}
+.menu > ul > li > a {
+    padding: 10px 40px;
+    color: black;
+    display: inline-block;
+}
+
+/*==================================
+            Dropdown 
+==================================*/
+
+a {
+    color: black;
+    cursor: auto;
+}
+ul {
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+    list-style: none;
+}
+li {
+    padding-left: 1em;
+    padding-top: .1em;
+    padding-bottom: .2em;
+}
+.menu li:hover .sub-menu {
+    z-index: 1;
+    opacity: 1;
+}
+.sub-menu {
+    width: 160%;
+    padding: 5px 0px;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    z-index: -1;
+    opacity: 0;
+    background: white;
+    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.2);
+    margin-left: 2em;
+}
+.sub-menu li a:hover {
+    color: #00d66c;
+}
+.sub-menu .current-item a {
+    background: white;
+    padding: .2em;
+}
+
+/* ==================================
+=            Linkjes               =
+=====================================*/
+
+a.deletefilter {
+    text-decoration: none;
+    color: white;
+}
+a.deletefilter:hover {
+    color: white;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: #00d66c;
+}
+
+/* ==================================
+=            Searchbox              =
+=====================================*/
+form{
+        position: fixed;
+        width: 187%;
+        height: 3em;
+        z-index: -1;
+    }
+input[type=search] {
+    width: 35.5%;
+    height: 3em;
+    box-sizing: border-box;
+    border: .1em solid #2802a0;
+    border-radius: .5em;
+    font-size: 1em;
+    background-color: white;
+    margin-top: 6em;
+    position: relative;
+}
+input {
+    background-color: #2802a0;
+    border-radius: .5em;
+    color: black;
+    padding: 1em;
+    font-family: "trebuchet ms", sans-serif;
+}
+input.submit {
+    font-size: .9em;
+    width: 5em;
+    color: white;
+}
+
+/* ==================================
+=            Profiel               =
+=====================================*/
+
+.profile {
+    padding: .5em;
+    margin-top: 1.2em;
+    margin-right: .1em;
+}
+.span {
+    color: black;
+}
+
+
+
+
+
+
+/* ==================================
+=            MediaQuerie 40em      =
+=====================================*/
+
+@media(min-width: 40em) {
+    #mobiel{
+        display: none;
+    }
+    #tablet{
+        display: block;
+        margin-top: 10em;
+        border-radius: .5em;
+        margin-right: 2em;
+    }
+.songTablet{
+        width: 102em;
+    }
+.zoonTablet{
+        width: 78em;
+    }
+.cockTablet{
+        width: 130em;
+    }
+    
+    
+#desktop{
+        display:none;
+    }
+    
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: .5em;
+    width: 92%;
+    margin-bottom: .5em;
+    position: fixed;
+    margin-right: 3em;
+}
+
+form{
+        position: fixed;
+        width: 220%;
+        height: 3em;
+        z-index: -1;
+    }
+input[type=search] {
+    width: 36.5%;
+    height: 3em;
+    box-sizing: border-box;
+    border: .1em solid #2802a0;
+    border-radius: .5em;
+    font-size: 1em;
+    background-color: white;
+    margin-top: 6em;
+    position: relative;
+}
+input {
+    background-color: #2802a0;
+    border-radius: .5em;
+    color: black;
+    padding: 1em;
+    font-family: "trebuchet ms", sans-serif;
+}
+input.submit {
+    font-size: .9em;
+    width: 5em;
+    color: white;
+}
+
+    
+}
+
+
+
+
+
+
+/* ==================================
+=            MediaQuerie 65em      =
+=====================================*/
+
+@media(min-width: 65em) {
+    #mobiel{
+        display: none;
+    }
+    #tablet{
+        display: none;
+    }
+    #desktop{
+        display: block;
+        margin-top: 10em;
+        border-radius: .5em;
+        margin-right: 2em;
+    }
+.songDesktop{
+        width: 96em;
+    }
+.zoonDesktop{
+        width: 92em;
+    }
+.cockDesktop{
+        width: 130em;
+    }
+    
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: .5em;
+    width: 96%;
+    margin-bottom: .5em;
+    position: fixed;
+    margin-right: 3em;
+}
+
+form{
+        position: fixed;
+        width: 220%;
+        height: 3em;
+        z-index: -1;
+    }
+input[type=search] {
+    width: 40.5%;
+    height: 3em;
+    box-sizing: border-box;
+    border: .1em solid #2802a0;
+    border-radius: .5em;
+    font-size: 1em;
+    background-color: white;
+    margin-top: 6em;
+    position: relative;
+}
+input {
+    background-color: #2802a0;
+    border-radius: .5em;
+    color: black;
+    padding: 1em;
+    font-family: "trebuchet ms", sans-serif;
+}
+input.submit {
+    font-size: .9em;
+    width: 5em;
+    color: white;
+}
+
+    
+}
+
+

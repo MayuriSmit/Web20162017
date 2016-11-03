@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="nl" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width,initial-scale-1">
+    <link rel="stylesheet" type="text/css" href="registreren.css">
+    <title>Opdracht 4 | Barbara Mayuri Smit | 500727541 | Frontend Development</title>
+</head>
+<body class="index">
+    <header>
+      <div class="menu-wrap">
+			<nav class="menu">
+				<ul class="clearfix">
+					<li>
+						<a href="overzichtpagina.html">Menu</a>
+				        <ul class="sub-menu">
+				            <li><a href="overzichtpagina.html"> Home </a></li>
+                            <li><a href="nieuwsteverhalen.html"> Nieuwste verhalen</a></li>
+                            <li><a href="populaireverhalen.html"> Populairste verhalen</a></li>
+                            <li><a href="langsteverhalen.html">Langste verhalen</a></li>
+                            <li><a href="kortsteverhalen.html"> Kortste verhalen</a></li>
+                            <li><a href="meestereviews.html"> Meeste reviews </a></li>
+                            <li><a href="contact.html"> Contact</a></li>
+                            <li><a href="profile.html"> Profiel</a></li>
+                            <li><a href="faq.html">  FAQ </a></li>
+						</ul>
+					</li>
+					
+				</ul>
+			</nav>
+        </div>        
+        <h1>Riding Reading</h1>
+          <span class="profile"><a href="profile.html" class="span">Log in</a></span>
+    </header>
+        <main class="register">  
+        <form id="fillinform">
+            <fieldset>
+               <legend>
+               persoonsgegevens
+           </legend>
+                <label for="name" > Voornaam <i>*</i></label> <input class="form" id="name" placeholder="Rowan" required autocomplete="on">
+                
+                <label for="surname"> Achternaam <i>*</i> </label><input class="form" id="surname" type="text" placeholder="Smit" required autocomplete="on">
+                
+                 <label for="birthdate"> Geboortedatum <i>*</i></label> <input class="form" id="birthdate" pattern="\d{1,2}/\d{1,2}/\d{4}" required autocomplete="on"><p class="tooltip">02/02/1992</p>
+                 
+                <label for="email"> E-mailadres <i>*</i> </label><input class="form" id="email" type="email" placeholder="jan@gmail.com" pattern="[\w\+\-\._]+@[\w\-\._]+\.\w{2,}" required autocomplete="on">
+                <p class="tooltip">bv. Jan@gmail.com</p>
+            
+            </fieldset>
+            <fieldset class="continu">
+                <label for="street"> Straatnaam<i>*</i></label><input class="form" id="street" type="text" placeholder="Straatnaam" required autocomplete="on">
+                
+                <label for="postcode"> Postcode <i>*</i> </label><input class="form" id="postcode" type="text" pattern="[1-9][0-9]{3}[a-zA-Z]{2}" placeholder="7021ZA" required autocomplete="on">
+               
+                <label for="number"> Huisnummer + Toevoeging<i>*</i></label><input class="form" id="number" type="text" pattern="^\d+$" placeholder="45-2" required autocomplete="on">
+               
+                 <label for="phonenumber"> Telefoonnummer<i>*</i> </label><input class="form" id="phonenumber" type="number" placeholder="0612345678" min="0600000000" max="0699999999" required autocomplete="on">
+                
+                
+            </fieldset>
+            <fieldset class="continu">
+                <label for="username"> Gebruikersnaam </label><input class="form" id="username" type="text" placeholder="Yolo" required autocomplete="on">
+                
+                <label for="password"> Wachtwoord </label><input class="form" id="password" type="password" placeholder="*******" required autocomplete="on">
+                
+                <label for="redopassword"> Herhaal Wachtwoord</label><input class="form" id="redopassword" type="password" placeholder="*******" required autocomplete="on">
+                
+                <label for="reset"></label>
+                <input type="reset" id="reset" value="Reset">
+            </fieldset>
+                     <button class="button">Registreren</button>
+            </form>
+            
+            
+            
+  
+    </main>
+</body>
+
+</html>

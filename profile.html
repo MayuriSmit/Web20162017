@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Riding reading</title>
+    <link rel="stylesheet" href="profile.css">
+    <script src="profile.js"></script>
+</head>
+
+<body class="index">
+    <header>
+        <section>
+            <h4>Menu</h4>
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a href="overzichtpagina.html">Menu</a>
+                        <ul class="sub-menu">
+                            <li><a href="overzichtpagina.html"> Home </a></li>
+                            <li><a href="nieuwsteverhalen.html"> Nieuwste verhalen</a></li>
+                            <li><a href="populaireverhalen.html"> Populairste verhalen</a></li>
+                            <li><a href="langsteverhalen.html">Langste verhalen</a></li>
+                            <li><a href="kortsteverhalen.html"> Kortste verhalen</a></li>
+                            <li><a href="meestereviews.html"> Meeste reviews </a></li>
+                            <li><a href="contact.html"> Contact</a></li>
+                            <li><a href="registrerenn.html"> Profiel</a></li>
+                            <li><a href="faq.html">  FAQ </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <h1>Riding Reading</h1>
+        <span class="profile"><a href="registrerenn.html" class="span">Hai, Rowan</a></span>
+    </header>
+
+    <main>
+        <form>
+            <input type="search" name="search" placeholder="Zoeken op">
+            <input class="submit" type="submit" value="Find">
+        </form>
+        <img src="img/RowanKilikolising.jpg" alt="Rowan Kilikolising">
+
+        <button onclick="toggle('sectiontohide');">Opgeslagen Verhalen </button>
+        <div id="sectiontohide">
+            <p> Geen opgeslagen verhalen</p>
+        </div>
+        <button onclick="toggle('sectiontohide2');">Gelezen Verhalen </button>
+        <div id="sectiontohide2">
+            <section class="article">
+                <h4>Gelezenverhalen onder elkaar</h4>
+                <article class="popular">
+                    <h2>Western</h2>
+                    <div class="rating"><span>☆</span><span>☆</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                    <footer>
+                        <hr>
+                        <h5>Geplaatst op <time datetime="2011-02-12 11:00">2-12-2011 om 11:00 uur</time> by Molovich</h5>
+                        <hr>
+                    </footer>
+                    <p>Een stofwolk ontneemt het zicht op de wegrijdende postkoets, die mij net heeft afgezet voor het station van dit door god verlaten prairydorp. Een tumbleweed ontneemt&hellip;</p>
+                    <button class="laterlezen">Later lezen</button>
+                    <button class="nulezen">Nu lezen</button>
+                </article>
+
+                <article class="popular">
+                    <h2>Hongerwinter</h2>
+                    <div class="rating"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                    <footer>
+                        <hr>
+                        <h5>Geplaatst op <time datetime="2011-02-12 11:00">2-12-2011 om 11:00 uur</time> by Molovich</h5>
+                        <hr>
+                    </footer>
+                    <p>Een autobus, eigendom van het Amsterdamse Gemeentevervoersbedrijf (hierna te noemen: GVB), zet mij en mijn gewaardeerde zoon, die zojuist in zijn gifgroene &hellip;</p>
+                    <button class="laterlezen">Later lezen</button>
+                    <button class="nulezen">Nu lezen</button>
+                </article>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

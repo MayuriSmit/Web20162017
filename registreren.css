@@ -1,0 +1,307 @@
+/*========================
+= The whole page in html =
+==========================*/
+html {
+    font-family: "trebuchet ms", sans-serif;
+    
+}
+.index {
+    background-image:url(img/book2.jpg);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: .5em;
+    width: 100%;
+     margin-bottom: .5em;
+}
+
+/* ==================================
+=            Teksten                =
+=====================================*/
+
+h1 {
+    font-size: 1.7em;
+    color: #00d66c;
+    text-align: center;
+    margin-top: 1em;
+    margin-left: -1.2em;
+}
+h2 {
+    font-size: 1.5em;
+    border-radius: .5em;
+    color: #00d66c;
+    background-color: white;
+    text-align: center;
+    margin: .5em;
+}
+h3 {
+    color: #00d66c;
+    border-radius: .2em;
+    padding: .5em;
+}
+h4 {
+    display: none;
+}
+h5 {
+    font-size: .7em;
+    border-radius: .5em;
+    text-align: center;
+}
+h6 {
+    font-size: .7em;
+}
+section > p {
+    color: white;
+    background-color: #2802a0;
+    border-radius: .5em;
+    padding: .5em;
+    margin: .5em;
+}
+.noshow {
+    display: none;
+}
+p.deletefilter:hover {
+    color: white
+}
+
+
+/* ==================================
+=            Navigatie               =
+=====================================*/
+ span{
+    padding: .5em;
+    margin-top: 1.3em;
+    margin-right: .1em;
+    font-size: 1.2em;
+}
+/* ==================================
+=            Eerste zicht            =
+=====================================*/
+.menu {
+    font-size: 1.2em;
+    margin-left:-4em;
+}
+menu:hover {
+    color: #00d66c;
+}
+.menu > ul > li {
+    float: left;
+    position: relative;
+}
+.menu > ul > li > a {
+    padding: 10px 40px;
+    color: black;
+    display: inline-block;
+}
+
+/*==================================
+            Dropdown 
+==================================*/
+
+a{
+    color: black;
+    cursor: auto;
+}
+
+ul {
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+    list-style: none;
+    
+}
+li {
+    padding-left: 1em;
+    padding-top: .1em;
+    padding-bottom: .2em;
+}
+.menu li:hover .sub-menu {
+    z-index: 3;
+    opacity: 1;
+}
+.sub-menu {
+    width: 160%;
+    padding: 5px 0px;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    z-index: -1;
+    opacity: 0;
+    background: white;
+    box-shadow:0px 4px 9px rgba(0,0,0,0.2);
+    margin-left: 2em;
+}
+
+.sub-menu li a:hover{
+    color:#00d66c; 
+}
+
+.sub-menu .current-item a {
+    background: white;
+    padding: .2em;
+    
+}
+
+/*==================================
+            Formulier 
+==================================*/
+
+.form{
+    width: 18.7em;
+}
+
+legend{
+    display: none;
+}
+#fillinform:invalid { 
+    border-radius: 0em 0em 2em 2em;
+}
+fieldset {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 17em;
+    margin-bottom: 1em;
+    border: none;
+    padding: 1em;
+    background: #b4ecb4;
+    border-radius: .5em;
+}
+.continu{
+    margin-top: -3em;
+}
+fieldset .feedback {
+    display: block;
+    color: White;
+    background: SeaGreen;
+    padding: .25em;
+}
+fieldset:invalid {
+    background: rgba(255, 255, 255, .1);
+}
+input {
+    padding: .25em;
+    font-size: 1.15em;
+    margin-bottom: 1em;
+    width: 100%;
+    transition: all .2s;
+    z-index: 2;
+}
+input:valid {
+    border: solid;
+    border-right-color: green;
+    border-bottom-color: green;
+    border-left-color: white;
+    border-top-color: white;
+    border-width: .1em;
+    background-color: #00d66c;
+    width: 16em;
+}
+input:invalid {
+    border-color: #ffb2ae;
+    background: #ffb2ae;
+    font-style: italic;
+    font-size: 1em;
+}
+input:focus {
+    transform: scale(1, 1);
+}
+input:focus + .tooltip {
+    display: block;
+    opacity: 1;
+    margin-top: -1em;
+}
+#reset {
+    font-size: 1.25em;
+    height: 2em;
+    background-color:#2802a0 ;
+    padding: .5em;
+    border-radius: .5em;
+    color: white;
+    border: none;
+    font-size:.9em;
+    
+}
+#reset:focus {
+    transform: scale(1.05, 1.05);
+    background-color:#0f013c;
+}
+
+.tooltip {
+    z-index:1;
+      color:red;
+      padding:.25em;
+      font-style:italic;
+      transition:all .4s;
+      margin-top:-3em;
+      opacity:.8;
+}
+
+i{ 
+    color: #e32;
+    font-size: 1.5em;
+}
+
+.button {
+    margin-top:-3em;
+    height: 3em;
+    font-size: 1.25em;
+    background-color: #ff3264;
+    border-radius: .5em;
+    color: white;
+    border: none;
+    font-size:.9em;
+    width: 23.3em;
+}
+
+.button:focus {
+    transform: scale(1.05, 1.05);
+}
+
+
+/* ==================================
+=            Searchbox              =
+=====================================*/
+
+input[type=search] {
+    width: 77%;
+    height: 3em;
+    box-sizing: border-box;
+    border: .1em solid #2802a0;
+    border-radius: .5em;
+    font-size: 1em;
+    background-color: white;
+}
+input {
+    background-color: #2802a0;
+    border-radius: .5em;
+    color: black;
+    padding: 1em;
+    font-family: "trebuchet ms", sans-serif;
+}
+
+
+#submit{
+    border-radius: .5em;
+    background-color:#2802a0;
+    font-size: .9em;
+    width: 5em;
+    color: white;
+}
+
+/* ==================================
+=            Media Queries          =
+=====================================*/
+@media(min-width: 25em) {
+    
+    #fillinform:invalid {
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        border-radius: 0em 0em 2em 2em;
+}
+    
+}
